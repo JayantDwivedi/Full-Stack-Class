@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map</title>
+    <style>
+        img{
+            width: 500px;
+            height: 300px;
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Image map</h1>
+    <br>
+    <p style="text-align: center; margin-left: auto; margin-right: auto; width: 80%;font-size: 32px;">This is the concept in which you
+        can click on the diffrent part of a image and you will move to the diffrent link each time </p><br>
+     <img src="../images/imagemap.jpg" alt="image of laptop,book and coffee" usemap="#map1">
+     
+     <map name="map1">
+         <area shape="reactangle" coords="206,18,362,178" href="https://www.apple.com/in/mac/" alt="macbook pro">
+         <area shape="circle" coords="458,212,32" href="https://www.cafecoffeeday.com/" alt="Cafe coffee day">
+         <area shape="poly" coords="81,148,180,130,201,238,103,255,81,148" href="https://en.wikipedia.org/wiki/Book" alt="book">
+     </map>
+     <br><br>
+     <p style="text-align: center; margin-left: auto; margin-right: auto; width: 80%;font-size: 32px;">Now you can click on Laptop, Book and coffee mug then see where your destiny brings you</p>
+</body>
+
+</html>

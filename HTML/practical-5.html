@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map</title>
+    <style>
+        body {
+            background-color: rgb(202, 202, 202);
+        }
+        .navigation img {
+            width: 1525px;
+            height : 110px;
+        }
+        .img-map img {
+            width:500px;
+            height:400px;
+            display: block;
+            position:relative;
+            margin-left: 500px;
+        }
+        .intro-line {
+            color:white;
+            font-size: 36px;
+            font-family: sans-serif;
+            text-align: center;
+            font-weight: 300;
+
+        }
+        .para {
+            text-align: center;
+            font-family: sans-serif;
+            color: red;
+            font-size: 24px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <img src="../images/nav-img.png" alt="navigation bar image" usemap="#map-nav">
+        <map name="map-nav">
+            <area shape="rectangle" coords="17,22,151,93" href="../index.html" alt="index-page">
+            <area shape="rectangle" coords="163,22,426,93" href="../HTML/practical-1.html" alt="practical-1 page">
+            <area shape="rectangle" coords="440,22,700,93" href="../HTML/practical-2.html" alt="practical-2 page">
+            <area shape="rectangle" coords="708,22,964,93" href="../HTML/practical-3.html" alt="practical-3 page">
+            <area shape="rectangle" coords="981,22,1237,93" href="../HTML/practical-4.html" alt="practical-4 page">
+            <area shape="rectangle" coords="1255,22,1504,93" href="../HTML/practical-5.html" alt="practical-5 page">
+        </map>
+    </div>
+    <div class="intro-line">
+        <p>Introduction to Front-End Technologies.</p>
+    </div>
+    <div class="img-map">
+        <img src="../images/javascript.png" alt="main image map" usemap="#map-img-main">
+        <map name="map-img-main">
+            <area shape="rectangle" coords="34,14,171,181" href="../HTML/intro-html.html" alt="HTML Intro page">
+            <area shape="circle" coords="340,107,75" href="../HTML/intro-css.html" alt="CSS Intro page">
+            <area shape="rectangle" coords="40,200,166,356" href="../HTML/intro-js.html" alt="JS Into Page">
+            <area shape="poly" coords="340,193,400,220,390,318,339,354,287,320,277,222,340,193" href="../HTML/intro-bootstrap.html" alt="Bootstrap Intro Page">
+        </map>
+    </div>
+    <div class="para">
+        <p>Click on any part of logo to know more about these technologies</p>
+    </div>
+</body>
+</html>

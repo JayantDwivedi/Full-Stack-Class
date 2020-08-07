@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-7</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .header{
+            background-color: gray;
+            color: white;
+            font-size: 24px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .banner{
+            background-color: lightblue;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            width: 100%;
+            height: 100vh;
+            margin-bottom: 15px;
+        }
+        .sec1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+
+        }
+        .sec1:after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+        .circle{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            background-color: goldenrod;
+            /* border:2px solid orange; */
+            float: left; 
+            margin-left: 10%;
+           
+        }
+        .sec2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .content {
+            background-color: gray;
+            color: white;
+            width: 50%;
+            height:510px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
+        .article{
+            background-color: darkorange;
+            display: flex;
+            width:48%;
+            height: 160px;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin-bottom: 15px;
+            float: ;
+        }
+        #sec3{
+            font-size: 32px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        #sec3::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .box{
+            width: 15%;
+            height: 150px;
+            background-color: brown;
+            float: left;
+            margin-left: 10%;
+            
+        }
+        #footer {
+            margin-bottom: 15px;
+            font-size: 32px;
+        }
+        .foot{
+            background-color: violet;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <p>Header</p>
+        </div>
+        <div class="banner"> 
+            <p>Banner</p>
+        </div>
+        <div class="sec1">
+            <p>Section 1</p>
+                
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+        </div>
+        <div class="sec2">
+            <p>Section 2</p>
+                <div id="left-part">
+                    <div class="content">
+                        <p>Main Content</p>
+                    </div>
+                </div>
+                <div id="right-part">
+                    <div class="article"><p>Article 1</p></div>
+                    <div class="article"><p>Article 1</p></div>
+                    <div class="article"><p>Article 1</p></div>
+                </div>
+        </div>
+        <div id="sec3">
+            <p>Section 3</p>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div id="footer">
+            <div class="foot"><p>Footer</p></div>
+        </div>
+    </div>
+</body>
+</html>

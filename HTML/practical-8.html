@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-8</title>
     <style>
-        * {
+        body {
             font-family: sans-serif;
-            margin: 0;
-            padding: 0;
+        }
+
+        .container {
+            width: 100%;
         }
 
         #navbar {
@@ -14,6 +19,8 @@
             overflow: hidden;
             background-color: grey;
             margin-bottom: 15px;
+            /* position: fixed;
+            width: 100vw; */
         }
 
         ul#navbar li {
@@ -36,106 +43,309 @@
             color: black;
         }
 
-        #heading {
+        .banner {
             background-image: url("../images/bg-practical-8.jpg");
             background-size: cover;
-            background-repeat: no-repeat;
-            height: 800px;
-            margin-bottom: 150px;
-        }
-
-        #heading h1 {
-            font-size: 72px;
             color: white;
-            padding: 15px 25px;
+            width: 100%;
+            height: 100vh;
+            margin-bottom: 15px;
         }
 
-        #team {
-            text-align: center;
-            margin-bottom: 150px;
+        .banner p {
+            font-size: 72px;
+            margin-top: 15px;
         }
 
-        #team h1 {
-            margin-bottom: 40px;
+        .sec1 {
+            margin-bottom: 70px;
         }
 
-        .photo-mem {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            float: left;
+        .sec1::after {
+            content: '';
             display: block;
-            margin-left: 10%;
+            clear: both;
         }
-        .left{
+
+        .sec1 p {
+            margin: 25px 0px;
+            text-align: center;
+            font-size: 50px;
+        }
+
+
+        .circle img {
+            position: relative;
+            float: left;
+            margin: 15px 5% 20px 5%;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        .sec2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+
+        }
+
+        .sec2 p {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .content {
+            text-align: center;
             background-color: gray;
             color: white;
+            width: 50%;
+            height: 510px;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
             float: left;
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
+
+        .content h2 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .content p {
+            font-size: 24px;
+            text-align: justify;
+            padding: 0px 15px 15px 15px;
+        }
+
+
+        .article {
+            background-color: darkorange;
+            display: flex;
+            width: 48%;
+            height: 160px;
+            justify-content: center;
+            /* align-items: center; */
+            color: black;
+            font-weight: 600;
+            ;
+            margin-bottom: 15px;
+            /* float: ; */
+        }
+
+        .article p {
+            margin-top: 10px;
+        }
+
+        .art1 {
+            background-image: url(../images/p1.jpg);
+        }
+
+        .art2 {
+            background-image: url(../images/p2.jpeg);
+        }
+
+        .art3 {
+            background-image: url(../images/p3.jpg);
+        }
+
+        #sec3 {
+            margin-bottom: 20px;
+            /* border: solid 2px red; */
+        }
+        #sec3 h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        #sec3::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .cards {
+            display: block;
+            width: 90%;
+            margin: auto;
+            margin-bottom: 20px;
+            /* border: solid black 2px; */
+        }
+        .cards::after {
+            display: block;
+            content: ' ';
+            clear: both;
+        }
+
+         .box {
+            width: 20%;
+            float: left;
+            margin: 20px 15px;
+            background-color: grey;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+        }
+        .box::after{
+            content: " ";
+            display: block;
+            clear: both;
+        }
+
+        .box h3 {
+            text-align: center;
+            font-size: 32px;
+        }
+         .box p{
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .box img {
+            position: relative;
+            display: block;
+            width: 90%;
+            height: 180px;
+            margin: 10px;
+            border-radius: 8px;
+
+        }
+
+        
+
+        .box h3 {
+            color: white;
+        }
+
+        .box a {
+            display: block;
+            font-size: 24px;
+            border: 2px solid red;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            background-color: red;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .box a:hover {
+            background-color: blue;
+            border: 2px solid blue;
+        }
+        #contact {
+            background-color: aqua;
+            color: black;
+            height: 60px;
+        }
+        #contact p{
+            font-size: 32px;
+            text-align: center;
+            margin-top: 20px;
+            
         }
     </style>
 </head>
 
 <body>
-    <ul id="navbar">
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT US</a></li>
-        <li><a href="#team">TEAM</a></li>
-        <li><a href="#">TECHNOLOGIES</a></li>
-        <li><a href="#">CONTACTS</a></li>
-    </ul>
-    <div id="heading">
-        <h1>PRACTICAL 8</h1>
-    </div>
-    <div id="team">
-        <h1>Team Members</h1>
-        <div class="team-photo">
-            <img class="photo-mem" src="../images/1.png" alt="team member photo">
-            <img class="photo-mem" src="../images/2.png" alt="team member photo">
-            <img class="photo-mem" src="../images/3.png" alt="team member photo">
-            <img class="photo-mem" src="../images/9.png" alt="team member photo">
+    <div class="container">
+        <div class="header">
+            <ul id="navbar">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#sec2">ABOUT US</a></li>
+                <li><a href="#team">TEAM</a></li>
+                <li><a href="#sec3">TECHNOLOGIES</a></li>
+                <li><a href="#contact">CONTACTS</a></li>
+            </ul>
         </div>
-    </div>
-    <div>
-        <h1>About Us</h1>
-        <div class="content">
-            <div class="left">
-                <h2>About Project</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem doloribus accusamus sed dolore
-                    obcaecati autem officia odit sunt eos maiores natus hic saepe, suscipit a aut ducimus asperiores,
-                    fuga eius velit! Nulla quam voluptate provident minima reprehenderit quod facilis. Ut, facere minus!
-                    Recusandae vero quos perspiciatis soluta optio asperiores ipsam quam numquam, libero inventore? Ut
-                    quibusdam rerum eius perspiciatis non corporis ipsum doloribus fugiat repellendus aliquam, nostrum,
-                    aliquid hic minima nihil, sunt explicabo praesentium mollitia vero repellat possimus inventore
-                    obcaecati! A debitis, accusamus officia reprehenderit accusantium minima aliquam, necessitatibus
-                    libero ex est placeat tempora quasi molestiae recusandae. Expedita ad natus voluptatibus placeat
-                    error esse nisi, eligendi debitis, cumque ducimus tenetur eaque mollitia quod quisquam voluptas ipsa
-                    ex sed accusantium? Nisi mollitia eligendi nesciunt. Ex odit quidem, architecto ducimus voluptas
-                    corrupti ut assumenda aliquid ab quibusdam similique fugiat aut, nulla libero? Quod, ipsa eos! Eius
-                    impedit quos quibusdam dolorum, hic a, quia quae excepturi voluptatibus, incidunt minima sequi
-                    libero repellendus voluptatem maxime velit ad id quidem sit doloribus nulla placeat. Quos nemo optio
-                    veritatis? Ullam iure vero ad magni voluptas dolore beatae officiis modi hic quam cumque magnam
-                    nobis sed, earum excepturi sint in ipsa labore atque molestias temporibus amet maiores fugiat ut.
-                    Cumque distinctio est possimus, deleniti excepturi quo nostrum porro culpa tempora repellat illum
-                    dolore sapiente quia reprehenderit sunt, quasi, voluptatibus consequatur. Officiis corporis aliquid
-                    voluptatem unde molestiae laborum repellendus neque? Ratione veniam animi suscipit dicta in. Totam
-                    nesciunt, saepe harum sapiente illo repellendus consequatur perferendis vitae explicabo. Ut neque
-                    molestias ipsam sit recusandae impedit porro dolorum commodi doloribus in laudantium reprehenderit
-                    eius, ipsa, libero iusto consequatur nesciunt, facere nihil incidunt et blanditiis vero. Voluptate
-                    alias aut ducimus reiciendis enim quas pariatur debitis! Voluptatum modi in veniam, quo tempore
-                    laudantium, maxime sit aperiam quam totam alias minus, maiores similique?</p>
+        <div class="banner">
+            <p>PRACTICAL 8</p>
+        </div>
+        <div class="sec1">
+            <p>Team Members</p>
+
+            <div class="circle"><img src="../images/1.png" alt=""></div>
+            <div class="circle"><img src="../images/2.png" alt=""></div>
+            <div class="circle"><img src="../images/3.png" alt=""></div>
+            <div class="circle"><img src="../images/9.png" alt=""></div>
+        </div>
+        <div class="sec2" id="sec2">
+            <p>About Us</p>
+            <div id="left-part">
+                <div class="content">
+                    <h2>About Project</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore sapiente iste doloribus dolorum
+                        ut, quisquam repudiandae. Fugiat voluptatibus ut qui maiores earum ipsa est adipisci, amet
+                        repellat perspiciatis corrupti, nulla eos ea architecto itaque, excepturi praesentium veniam
+                        litia laboriosam necessitatibus a dicta. Delectus modi, quibusdam Lorem ipsum, dolor sit amet
+                        consectetur adipisicing elit. Tenetur tempore minus rerum, iste alias numquam maxime eaque
+                        quibusdam suscipit.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam corporis et, dolorem ex omnis,                        
+                    </p>
+                </div>
             </div>
-            <div class="right">
-                <div class="artical">
-
+            <div id="right-part">
+                <div class="article art1">
+                    <p>Project 1</p>
                 </div>
-                <div class="artical">
-
+                <div class="article art2">
+                    <p>Project 2</p>
                 </div>
-                <div class="artical">
-
+                <div class="article art3">
+                    <p>Project 3</p>
                 </div>
             </div>
         </div>
+        <div id="sec3">
+            <h1>Technologies Used</h1>
+            <div class="cards">
+            <div class="box">
+                <img src="../images/introHTML.png" alt="html image" class="image">
+                <h3>Introduction to HTML</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad reiciendis adipisci voluptatibus
+                    dignissimos
+                    eveniet assumenda necessitatibus id corrupti ducimus quas?
+                </p>
+                <a href="../HTML/intro-html.html">Read More</a>
+            </div>
+            <div class="box">
+                <img src="../images/introCSS.png" alt="css image" class="image">
+                <h3>Introduction to CSS</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad reiciendis adipisci voluptatibus
+                    dignissimos
+                    eveniet assumenda necessitatibus id corrupti ducimus quas?
+                </p>
+                <a href="../HTML/intro-css.html">Read More</a>
+            </div>
+            <div class="box">
+                <img src="../images/intro-js.jpg" alt="JS image" class="image">
+                <h3>Introduction to JavaScript</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad reiciendis adipisci voluptatibus
+                    dignissimos
+                    eveniet assumenda necessitatibus id corrupti ducimus quas?
+                </p>
+                <a href="../HTML/intro-js.html">Read More</a>
+            </div>
+            <div class="box">
+                <img src="../images/intro-bootstrap.jpg" alt="bootstrap image" class="image">
+                <h3>Introduction to Bootstrap</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad reiciendis adipisci voluptatibus
+                    dignissimos
+                    eveniet assumenda necessitatibus id corrupti ducimus quas?
+                </p>
+                <a href="../HTML/intro-bootstrap.html">Read More</a>
+            </div>
+        </div>
     </div>
+    <div id="contact">
+        <p>Contact Us </p>
+    </div>
+    </div>
+</body>
 
 </html>

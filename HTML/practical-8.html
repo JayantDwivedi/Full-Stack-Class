@@ -1,351 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practical-8</title>
+
     <style>
-        body {
-            font-family: sans-serif;
-        }
 
-        .container {
+        #header{
+            background-color: gray;
+            height: 9vh;
             width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 15px;  
+            top: 0;
+            position: fixed;  
         }
 
-        #navbar {
+        ul li{
+            padding: 30px;
             list-style-type: none;
-            overflow: hidden;
-            background-color: grey;
-            margin-bottom: 15px;
-            /* position: fixed;
-            width: 100vw; */
+            display: inline-block;
+
         }
 
-        ul#navbar li {
-            float: left;
-            padding: 25px 30px;
-        }
-
-        ul#navbar li a {
-            display: block;
-            color: white;
-            font-weight: bold;
-            padding: 8px 16px;
+        ul li a{
             text-decoration: none;
-        }
-
-
-        ul#navbar li a:hover {
-            display: block;
-            background-color: white;
             color: black;
         }
 
-        .banner {
-            background-image: url("../images/bg-practical-8.jpg");
-            background-size: cover;
+        ul li a:hover{
             color: white;
-            width: 100%;
+            background-color: pink;
+        }
+        
+        #banner{
+            margin-top: 80px;
+            color: white;
+            background-image: url("../images/bg-practical-8.jpg");
+            background-size: 100% 100vh;
             height: 100vh;
-            margin-bottom: 15px;
+            width: 100%;
+            display: flex;
+            justify-content: left;
+            font-size: 45px;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
-        .banner p {
-            font-size: 72px;
-            margin-top: 15px;
-            padding-top: 20px;
-            padding-left: 20px;
-        }
-
-        .sec1 {
-            margin-bottom: 70px;
-        }
-
-        .sec1::after {
-            content: '';
-            display: block;
-            clear: both;
-        }
-
-        .sec1 h1 {
-            /* margin: 25px 0px; */
+        h4{
+            margin-top: 80px;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
             text-align: center;
-            font-size: 40px;
         }
 
-
-        .circle img {
-            position: relative;
-            float: left;
-            margin: 15px 5% 20px 5%;
-            height: 200px;
+        .circle{
             width: 200px;
+            height: 200px;
+            float: left;
+            margin-left: 105px ;
+            padding: 22px;
             border-radius: 50%;
         }
 
-        .sec2 {
-            font-size: 32px;
-            margin-bottom: 15px;
-
-        }
-
-        .sec2 h1 {
-            font-size: 40px;
-            text-align: center;
-        }
-
-        .content {
-            text-align: center;
-            background-color: gray;
-            color: white;
-            width: 50%;
-            height: 510px;
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
-            float: left;
-            margin-right: 15px;
-            margin-bottom: 15px;
-        }
-
-        .content h2 {
-            font-size: 40px;
-            text-align: center;
-        }
-
-        .content p {
-            font-size: 24px;
-            text-align: justify;
-            padding: 0px 15px 15px 15px;
-        }
-
-
-        .article {
-            background-color: darkorange;
-            display: flex;
-            width: 48%;
-            height: 160px;
-            justify-content: center;
-            /* align-items: center; */
-            color: black;
-            font-weight: 600;
-            ;
-            margin-bottom: 15px;
-            /* float: ; */
-        }
-
-        .article p {
-            margin-top: 10px;
-        }
-
-        .art1 {
-            background-image: url(../images/p1.jpg);
-        }
-
-        .art2 {
-            background-image: url(../images/p2.jpeg);
-        }
-
-        .art3 {
-            background-image: url(../images/p3.jpg);
-        }
-
-        #sec3 {
-            margin-bottom: 20px;
-            /* border: solid 2px red; */
-        }
-        #sec3 h1 {
-            font-size: 40px;
-            text-align: center;
-        }
-
-        #sec3::after {
+        .sec-1::after{
             content: '';
             display: block;
             clear: both;
         }
 
-        .cards {
-            display: block;
-            width: 90%;
-            margin: auto;
-            margin-bottom: 20px;
-            /* border: solid black 2px; */
-        }
-        .cards::after {
-            display: block;
-            content: ' ';
-            clear: both;
+        #left-part{
+            width: 48%;
+            height: 70vh;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-bottom: 15px;
+            background-color: gray;
+            float: left;
+            display: flex;
         }
 
-         .box {
+        #about{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            padding: 20px;
+            text-align: justify;
+        }
+
+        .articals{
+            display: flex;
+            width: 46%;
+            height: 20.8vh;
+            justify-content: center;
+            margin-bottom: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            color: black;
+        }
+
+        #artical1{
+            background-image: url("../images/p1.jpg");
+            width: 46%;
+            height: 20.7vh;
+        }
+
+        #artical2{
+            background-image: url("../images/p2.jpeg");
+            width: 46%;
+            height: 20.7vh;
+        }
+
+        #artical3{
+            background-image: url("../images/p3.jpg");
+            width: 46%;
+            height: 20.7vh;
+        }
+
+        .box
+        {
             width: 20%;
             float: left;
-            margin: 20px 15px;
-            background-color: grey;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+            margin: 5px 25px;
+            background-color: rgb(255, 251, 251);
+            padding: 12px;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
         }
-        .box::after{
-            content: " ";
+
+        .image
+        {
+            width: 80%; 
+            height: 180px;
+            display: block; 
+            margin-left: auto; 
+            margin-right: auto;
+            border-radius: 10px;
+        }
+
+        h3
+        {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p
+        {
+            text-align: justify;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .box a
+        {
+            text-decoration: none;
+            display: block;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .box a:hover
+        {
+            background-color: blue;
+        }
+
+        .sec-3::after{
+            content: '';
             display: block;
             clear: both;
         }
 
-        .box h3 {
-            color: black;
-            text-align: center;
-            font-size: 32px;
-        }
-         .box p{
-            font-size: 18px;
-            text-align: justify;
-            color: white;
-        }
-
-        .box img {
-            position: relative;
-            display: block;
-            width: 90%;
-            height: 180px;
-            margin: 10px;
-            border-radius: 8px;
-
-        }
-
-        .box a {
-            display: block;
-            font-size: 24px;
-            border: 2px solid red;
-            text-decoration: none;
-            text-align: center;
-            color: white;
-            background-color: red;
-            padding: 10px;
-            border-radius: 8px;
-        }
-
-        .box a:hover {
-            background-color: blue;
-            border: 2px solid blue;
-        }
-        #contact {
+        .footer{
+            width: 100%;
+            height: 9vh;
             background-color: pink;
-            color: black;
-            height: 80px;
-            /* border: solid black 2px; */
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            font-size: 20px;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
         }
-        #contact p{
-            font-size: 32px;
+
+        #backtotop{
             text-align: center;
-            margin-top: 20px;
-            padding-top: 20px;
-            
+            display: block;
         }
+    
     </style>
 </head>
-
 <body>
+    
     <div class="container">
-        <div class="header">
-            <ul id="navbar">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#sec2">ABOUT US</a></li>
-                <li><a href="#team">TEAM</a></li>
-                <li><a href="#sec3">TECHNOLOGIES</a></li>
-                <li><a href="#contact">CONTACTS</a></li>
+        <div id="header">
+            <ul>
+                <li><a href=""><b> HOME </b></a></li>
+                <li><a href="#team"><b> TEAM </b></a></li>
+                <li><a href="#aboutus"><b> ABOUT US </b></a></li>
+                <li><a href="#technologies  "><b> TECHNOLOGIES </b></a></li>
+                <li><a href="#contact"><b> CONTACT </b></a></li>
             </ul>
         </div>
-        <div class="banner">
-            <p>PRACTICAL 8</p>
-        </div>
-        <div class="sec1">
-            <h1>Team Members</h1>
 
-            <div class="circle"><img src="../images/1.png" alt=""></div>
-            <div class="circle"><img src="../images/2.png" alt=""></div>
-            <div class="circle"><img src="../images/3.png" alt=""></div>
-            <div class="circle"><img src="../images/9.png" alt=""></div>
+        <div id="banner">
+            <b> PRACTICAL - 8 </b>
         </div>
-        <div class="sec2" id="sec2">
-            <h1>About Us</h1>
+
+
+        <div class="sec-1">
+
+            <h4 id="team">TEAM MEMBERS</h4>
+
+            <div>
+                <img class="circle" src="../images/1.png" alt="member1">
+            </div>
+
+            <div >
+                <img class="circle" src="../images/2.png" alt="member2">
+            </div>
+
+            <div >
+                <img class="circle" src="../images/3.png" alt="member3">
+            </div>
+
+            <div >
+                <img class="circle" src="../images/9.png" alt="member4">
+            </div>
+        </div>
+
+        <div class="sec-2">
+
+            <h4 id="aboutus">ABOUT US</h4>
+            <br>
+            <br>
+
             <div id="left-part">
-                <div class="content">
-                    <h2>About Project</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore sapiente iste doloribus dolorum
-                        ut, quisquam repudiandae. Fugiat voluptatibus ut qui maiores earum ipsa est adipisci, amet
-                        repellat perspiciatis corrupti, nulla eos ea architecto itaque, excepturi praesentium veniam
-                        litia laboriosam necessitatibus a dicta. Delectus modi, quibusdam Lorem ipsum, dolor sit amet
-                        consectetur adipisicing elit. Tenetur tempore minus rerum, iste alias numquam maxime eaque
-                        quibusdam suscipit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam corporis et, dolorem ex omnis,                        
-                    </p>
+                <div id="about">
+                    <h3>About Projects</h3>
+
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, rem fugit. Nesciunt ipsum voluptas 
+                    rerum deserunt quos beatae sequi explicabo minima illo fugit. Expedita a, reprehenderit aspernatur
+                    hic debitis sapiente numquam iure, incidunt magnam, quas recusandae animi minima natus ea perferendis 
+                    delectus ad illo ipsa? Consectetur sunt inventore pariatur nulla asperiores repellat quam eligendi ducimus 
+                    atque sit reprehenderit, corrupti harum obcaecati animi consequuntur alias possimus quidem esse perferendis, 
+                    impedit provident. Neque, asperiores. Sapiente explicabo vel accusantium est dolorem? Dignissimos laborum 
+                    omnis ex ad unde provident ullam, iure perferendis officiis rem! Eligendi, eos. Eveniet quae quaerat blanditiis 
+                    labore? Dolore vero explicabo assumenda sit quisquam modi sunt odit voluptatem iste veniam dolor dicta rerum 
+                    laudantium illo a quae aperiam quis sed, placeat rem. Omnis, soluta assumenda ullam 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe fugiat nobis corrupti culpa consectetur eius rem error ex!
+                    Inventore, tempore impedit. Autem voluptatibus placeat, exercitationem minima aliquam aut accusamus voluptas! 
                 </div>
             </div>
+
             <div id="right-part">
-                <div class="article art1">
-                    <p>Project 1</p>
+                <div class="articals" id="artical1" >
+                    PROJECT 1
                 </div>
-                <div class="article art2">
-                    <p>Project 2</p>
+
+                <div class="articals " id="artical2">
+                    PROJECT 2
                 </div>
-                <div class="article art3">
-                    <p>Project 3</p>
+
+                <div class="articals " id="artical3">
+                    PROJECT 3
                 </div>
             </div>
         </div>
-        <div id="sec3">
-            <h1>Technologies Used</h1>
-            <div class="cards">
+
+        <div class="sec-3">
+
+            <h4 id="technologies">TECHNOLOGIES USED</h4>
+
             <div class="box">
-                <img src="../images/introHTML.png" alt="html image" class="image">
+                <img src="../images/introHTML.png" alt="this is html image." class="image">
                 <h3>Introduction to HTML</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad reiciendis adipisci voluptatibus
-                    dignissimos
-                    eveniet assumenda necessitatibus id corrupti ducimus quas?
+                    HTML stands for Hypertext Markup Language, and it is the most widely used language to write Web Pages.
+    
+                    Hypertext refers to the way in which Web pages (HTML documents) are linked together. Thus, the link
+                    available on a webpage is called Hypertext.
                 </p>
-                <a href="../HTML/intro-html.html">Read More</a>
+    
+                <a href="../HTML/intro-html.html">
+                    Read More
+                </a>
             </div>
+    
             <div class="box">
-                <img src="../images/introCSS.png" alt="css image" class="image">
+                <img src="../images/introCSS.png" alt="this is css image." class="image">
                 <h3>Introduction to CSS</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad reiciendis adipisci voluptatibus
-                    dignissimos
-                    eveniet assumenda necessitatibus id corrupti ducimus quas?
+                    CSS is short for Cascading Style Sheets, and is the preferred way for setting the look and feel of a website.
+                    Cascading Style Sheets (CSS) is a markup language responsible for how your web pages will look like. It
+                    controls the colors, fonts, and layouts of your website elements.
                 </p>
-                <a href="../HTML/intro-css.html">Read More</a>
+    
+                <a href="../HTML/intro-css.html">
+                    Read More
+                </a>
             </div>
+    
             <div class="box">
-                <img src="../images/intro-js.jpg" alt="JS image" class="image">
-                <h3>Introduction to JavaScript</h3>
+                <img src="../images/intro-js.jpg" alt="this is JavaScript image." class="image">
+                <h3>Introduction to Java Script</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad reiciendis adipisci voluptatibus
-                    dignissimos
-                    eveniet assumenda necessitatibus id corrupti ducimus quas?
+                    JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class
+                    functions. While it is most well-known as the scripting language for Web pages, many non-browser
+                    environments also use it, such as Node.js.
                 </p>
-                <a href="../HTML/intro-js.html">Read More</a>
+    
+                <a href="../HTML/intro-js.html" >
+                    Read More
+                </a>
             </div>
+    
             <div class="box">
-                <img src="../images/intro-bootstrap.jpg" alt="bootstrap image" class="image">
-                <h3>Introduction to Bootstrap</h3>
+                <img src="../images/intro-bootstrap.jpg" alt="this is bootstrap image." class="image">
+                <h3>Introduction to BOOTSTRAP</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad reiciendis adipisci voluptatibus
-                    dignissimos
-                    eveniet assumenda necessitatibus id corrupti ducimus quas?
+                    Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web
+                    development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms,
+                    buttons, navigation, and other interface components.
                 </p>
-                <a href="../HTML/intro-bootstrap.html">Read More</a>
+    
+                <a href="../HTML/intro-bootstrap.html">
+                    Read More
+                </a>
             </div>
         </div>
-    </div>
-    <div id="contact">
-        <p>Contact Us </p>
-    </div>
-    </div>
-</body>
 
+        <div class="sec-4">
+
+            <h4 id="contact">CONTACT</h4>
+
+            <div class="footer">
+                <div>
+                    Website Templete for Practical-8 © <a href="../index.html" target="_blank"> Practicals </a>
+                    <p ><a id="backtotop" href="">Back to Top</a></p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+            
+
+</body>
 </html>

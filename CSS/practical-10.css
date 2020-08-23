@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header img {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+}
+
+.header h1 {
+    line-height: 70px;
+    color: white;
+}
+
+.content {
+    width: 100%;
+    padding: 20px;
+    transition: 0.7s;
+}
+
+.content img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: auto;
+}
+
+.content p {
+    text-align: justify;
+}
+
+.sidebar {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: 70px;
+    background-color: #353b48;
+    left: -100%;
+    transition: 0.7s;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    border-bottom: 2px solid rgba(255, 255, 255,0.1);
+
+}
+
+.sidebar ul li a  {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 15px 25px;
+    transition: .4s;
+
+}
+
+/* a i {
+    margin-right: 15px;
+} */
+
+/* .sidebar ul li a i {
+    margin-right: 15px;
+} */
+
+.sidebar ul li a span {
+    margin-left: 20px;
+}
+
+.sidebar ul li a:hover {
+    border-left:  10px solid white;
+}
+
+.social {
+    margin-top: 200px;    /*screen dependent */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 25px;
+}
+i {
+    font-size: 30px;
+    color: white;
+
+}
+
+.show-btn, .hide-btn {
+    font-size: 35px;
+    color: white;
+    position: fixed;
+    top:20px;
+    left: 50px;
+}
+.hide-btn {
+    opacity: 0;
+}
+
+#chk:checked ~ .sidebar {    /* what is the meaning of these things */
+    left: 0;
+}
+
+#chk:checked ~ .show-btn{
+    opacity: 0;
+}
+#chk:checked ~ .hide-btn{
+    opacity: 1;
+}
+#chk:checked ~ .content{
+    width: 80%;
+    margin-left: 20%;     /* extra added */
+
+}
+
+@media(max-width:768px) {
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+    .header h1 {
+        display: none;
+    }
+}
+
+/* Problems that i faced
+ 1. how fast we calculate size of margin and all these stuff
+ 2. is it size dependent to laptop 
+ 3. line 91 in css is size dependent to laptop as seen in video 
+ 4. show button and hide button 
+ 5. meaning of line 117 onwards
+ 6. some issues with moving text towards right side (added margin tag extra )
+*/

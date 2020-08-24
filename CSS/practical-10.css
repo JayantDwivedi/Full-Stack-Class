@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .header img {
@@ -36,6 +37,7 @@
     max-width: 700px;
     display: block;
     margin: auto;
+    margin-bottom: 30px;
 }
 
 .content p {
@@ -148,4 +150,5 @@ i {
  5. meaning of line 117 onwards
  6. some issues with moving text towards right side (added margin tag extra )
  7. beautify is not working properly
+ 8. when we scroll down it leaves navigation bar with header
 */

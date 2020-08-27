@@ -8,6 +8,7 @@
 .header {
     width: 100%;
     height: 70px;
+    position: fixed;
     background-color: #2f3640;
     display: flex;
     justify-content: center;
@@ -123,7 +124,7 @@ i {
 #chk:checked ~ .show-btn{
     opacity: 0;
 }
-#chk:checked ~ .hide-btn{
+#chk:checked ~ .hide-btn{  
     opacity: 1;
 }
 #chk:checked ~ .content{
@@ -143,12 +144,12 @@ i {
 }
 
 /* Problems that i faced
- 1. how fast we calculate size of margin and all these stuff
- 2. is it size dependent to laptop 
- 3. line 91 in css is size dependent to laptop as seen in video 
- 4. show button and hide button 
- 5. meaning of line 117 onwards
- 6. some issues with moving text towards right side (added margin tag extra )
- 7. beautify is not working properly
- 8. when we scroll down it leaves navigation bar with header
+        1. how fast we calculate size of margin and all these stuff
+        2. is it size dependent to laptop 
+        3. line 91 in css is size dependent to laptop as seen in video 
+        4. show button and hide button 
+        5. meaning of line 117 onwards
+        6. some issues with moving text towards right side (added margin tag extra )
+        7. beautify is not working properly
+        8. when we scroll down it leaves navigation bar with header
 */

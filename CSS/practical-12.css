@@ -62,7 +62,8 @@ tfoot tr {
 
 a {
     text-decoration: none;
-    background-color: #64548f;
+    /* background-color: #64548f; */
+    background-color: black;
     padding:10px 25px;
     color:white;
     border-radius: 10px;
@@ -70,7 +71,8 @@ a {
     vertical-align: middle;
 }
 a:hover {
-    background-color: red;
+    
+    color: red;
 }
 h2{
     text-align: center;

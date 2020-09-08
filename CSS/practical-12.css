@@ -51,9 +51,10 @@ span {
     color:#64548f ;
     margin-right:10px;
 }
-tbody tr :nth-child(odd), tfoot tr :nth-child(odd) {
+tbody tr :nth-child(odd) tfoot tr :nth-child(odd) {
     background-color: #edf3e2;
 }
+
 
 tfoot tr {
     line-height: 70px;
@@ -62,8 +63,7 @@ tfoot tr {
 
 a {
     text-decoration: none;
-    /* background-color: #64548f; */
-    background-color: black;
+    background-color: #64548f;
     padding:10px 25px;
     color:white;
     border-radius: 10px;
@@ -71,8 +71,8 @@ a {
     vertical-align: middle;
 }
 a:hover {
-    
     color: red;
+    background-color: yellow;
 }
 h2{
     text-align: center;
@@ -82,7 +82,4 @@ tbody tr:first-child td {
     font-size: 20px;
     color: green;
 }
-td img {
-    height: 20px;
-    width: 20px;
-}
+

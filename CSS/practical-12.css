@@ -51,14 +51,12 @@ span {
     color:#64548f ;
     margin-right:10px;
 }
-tbody tr :nth-child(odd) tfoot tr :nth-child(odd) {
+tbody tr:nth-child(odd), tfoot tr:nth-child(even) {
     background-color: #edf3e2;
-}
-
+} 
 
 tfoot tr {
     line-height: 70px;
-
 }
 
 a {
@@ -78,7 +76,8 @@ h2{
     text-align: center;
     text-transform: uppercase;
 }
-tbody tr:first-child td {
+
+tbody tr:first-child {
     font-size: 20px;
     color: green;
 }

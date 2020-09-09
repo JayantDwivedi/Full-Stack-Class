@@ -1,20 +1,31 @@
-table,tr,td,th {
-    border-bottom: 2px solid black;
-    border-collapse: collapse;
+tr,td,th {
+    border-bottom: 2px solid rgb(156, 149, 149);
+    /* border-spacing: 0; */
     padding: 10px;
     font-size: 20px;
 }
+
+
 table {
     border: 2px solid black;
- 
-}
-table {
     width: 80%;
     margin: 20px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+
+}
+tr {
+    border-left: 2px solid black;
 }
 th {
     font-weight: bold;
-    /* text-align: left; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     font-size: 24px;
 }
 #topic {
@@ -38,14 +49,13 @@ tr:hover{
 }
 td a {
     text-decoration: none;
+    color: black;
 }
 td a:hover {
     text-decoration: none;
-    color: rgb(238, 129, 40);
+    color: blue;;
 }
-/* td i:hover {
-    color: red;
-} */
+
 .delete:hover {
     color: red;
 }

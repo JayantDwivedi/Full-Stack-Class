@@ -13,7 +13,7 @@ console.log("Before " + JSON.stringify(testArray));
 // 3 === '3'   this gave a false value because string is not equal to number
 // 3 == '3'    this return true because number converted to string then compare to the string 
 // 3 != 4      this is not equality sign
-// 3 !== '3'   this is strict inequality sign check for data type along with value. 
+// 3 !== '3'   this is strict inequality sign check for data type along with value.  
 
 if (3 == '3') {
     console.log("num to string conversion then compare");

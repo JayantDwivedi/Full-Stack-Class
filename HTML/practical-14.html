@@ -36,10 +36,11 @@
 
         <form id="form2">
             <h1>Sign up</h1>
-            <input placeholder="Your Email" type="text" required="">
+            <input placeholder="Your Email" type="text" required="" class="upper-from2-input">
             <input placeholder="Your Password" type="password" required=""><br>
             <input type="checkbox" name="accept" id="accept">
             <label for="accept">Accept the <a href="#">Terms & Conditions</a></label>
+            <br>
             <button>SIGN UP</button>
             <p>Have an account? <a href="#">Log in</a></p>
             <section class="bottom">
@@ -51,17 +52,19 @@
 
         <!-- Sign in -->
 
-        <form>
+        <form id="form3">
             <h1>Sign in</h1>
-            <input placeholder="Your Email" type="text" required="">
-            <input placeholder="Your Password" type="password" required="">
-            <a href="#">Forgot Passowrd?</a>
+            <section class="input">
+                <input placeholder="Your Email" type="text" required=""><br>
+                <input placeholder="Your Password" type="password" required=""><br>
+                <a href="#">Forgot Password?</a>
+            </section>
             <button>SIGN IN</button>
-            <p>or Sign in with</p>
-            <section class="link">
+            <section class="social">
+                <p>or sign in with:</p>
                 <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="#"> <i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
             </section>
         </form>
     </section>

@@ -195,14 +195,14 @@ input[type='checkbox'] {
  padding: 20px;
 }
 
-input[type=email] {
+input[type='email'] {
     outline: none;
     border: none;
     border-bottom: 1px solid grey;
     width: 100%;
     padding-bottom: 8px;
 }
-input[type=password] {
+input[type='password'] {
     outline: none;
     border: none;
     border-bottom: 1px solid grey;
@@ -229,18 +229,21 @@ input[type=password] {
     color: #3498db;
     
 }
-input[type=submit] {
+.form-container-t3 input[type=submit] {
     outline: none;
     border: none;
     border-radius: 20px;
+    width: 100%;
+    display: block;
     background-color: grey;
     color: white;
     padding: 10px 20px;
     margin-top: 30px;
 }
-.form-container-t3 #p4{
+.form-container-t3 p#p4{
     display: inline ;
     margin-left: 10px;
+    color: black;
     text-align: center;
 }
 

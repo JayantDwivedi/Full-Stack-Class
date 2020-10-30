@@ -2,22 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practical-15</title>
-    <link rel="stylesheet" href="../CSS/practical-15.css">
+    <link rel="stylesheet" href="../css/Practical-15.css" />
 </head>
 
 <body>
-    <h1>Practical-15 Create a Counter Page using JavaScript.</h1>
-    <div id="container">
-        <h1>Counter</h1>
-        <div id="number">0</div>
-        <button id="increment">+</button>
-        <button id="decrement">-</button>
-
+    <h3>Practical-15 Create a Counter Page using JavaScript.</h3>
+    <h1>Counter</h1>
+    <div class="container">
+        <button id="sub" class="btn" onclick="decrement()">-</button>
+        <div class="counter" id="count">0</div>
+        <button id="add" class="btn" onclick="increment()">+</button>
     </div>
-    <script src="../JavaScript/practical-15.js"></script>
+    <script>
+        var count = 0;
+        document.getElementById("sub").disabled = true;
+
+        function increment() {
+            document.getElementById("sub").disabled = false;
+            count++;
+            document.getElementById("count").innerHTML = count;
+        }
+
+        function decrement() {
+            if (count === 0) {
+                document.getElementById("sub").disabled = true;
+            } else {
+                count--;
+                document.getElementById("count").innerHTML = count;
+            }
+            if (count === 0) {
+                document.getElementById("sub").disabled = true;
+            }
+        }
+    </script>
 </body>
 
 </html>

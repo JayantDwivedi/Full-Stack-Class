@@ -1,41 +1,81 @@
 body {
-    background-color: gray;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: grey;
+
 }
 
-#container {
-    height: 300px;
-    width: 500px;
-    border: 10px solid #9269b1;
-    margin: 50px auto;
-    background-color: green;
+h3 {
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
 }
 
 h1 {
+    margin-top: 70px;
+    font-size: 72px;
     text-align: center;
     color: white;
 }
 
-#number {
-    height: 25px;
-    width: 250px;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    border: 2px solid red;
+    border-radius: 20px;
+    background-color: #fff;
+    width: 50%;
     margin: auto;
-    margin-top: 50px;
-    border: 1px solid black;
-    text-align: center;
-    background-color: white;
+
 }
 
-#increment {
-    height: 25px;
-    width: 100px;
-    margin-top: 50px;
-    margin-left: 125px;
+.btn {
+    font-size: 50px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: blanchedalmond;
+    background-color: rgb(8, 8, 8, 0.8);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+    transition: 0.8s;
 }
 
-#decrement {
-    height: 25px;
-    width: 100px;
-    margin-top: 50px;
-    margin-left: 50px;
+.btn:hover {
+    font-size: 50px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: blanchedalmond;
+    background-color: rgb(8, 8, 8, 0.8);
+    border-radius: 10px;
+    box-shadow: 15px 15px 15px grey;
+    transition: 0.3s;
+}
+
+.btn:active {
+    font-size: 50px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: blanchedalmond;
+    background-color: rgb(8, 8, 8, 0.8);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px grey;
+
+}
+
+.counter {
+    font-size: 70px;
+    margin: 20px;
+    background-color: #2ECC71;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
 }

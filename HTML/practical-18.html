@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical-18</title>
+    <link rel="stylesheet" href="../css/practical-18.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form id="form">
+        <h1>Create Account</h1>
+        <div class="name">
+          <input
+            class="input"
+            type="text"
+            id="username"
+            placeholder="Username"
+          />
+          <i id='name-fails' class="fa fa-exclamation-triangle" style="color:red"></i>
+          <i id='name-check' class="fa fa-check-circle" style="color:green"></i>
+        </div>
+        <small id="user-msg">* njejfwef </small>
+        <div class="email">
+          <input class="input" type="text" id="email" placeholder="Email" />
+          <i id='email-fails' class="fa fa-exclamation-triangle" style="color:red"></i>
+          <i id='email-check' class="fa fa-check-circle" style="color:green"></i>
+        </div>
+        <small id="email-error">* njejfwef</small>
+        <div class="password">
+          <input
+            class="input"
+            type="password"
+            id="password"
+            placeholder="Password"
+          />
+          <i id='password-fails' class="fa fa-exclamation-triangle" style="color:red"></i>
+          <i id='password-check' class="fa fa-check-circle" style="color:green"></i>
+        </div>
+        <small id="pass-error">* njejfwef </small>
+        <div class="confirm-password">
+          <input
+            class="input"
+            type="password"
+            id="confirm-password"
+            placeholder="Confirm Password"
+          />
+          <i id='confirm-fails' class="fa fa-exclamation-triangle" style="color:red"></i>
+          <i id='confirm-check' class="fa fa-check-circle" style="color:green"></i>
+        </div>
+        <small id="confirm-error">* njejfwef </small>
+        <button id="submit-btn">Submit</button>
+      </form>
+    </div>
+  </body>
+  <script src="../javascript/practical-18.js"></script>
+</html>

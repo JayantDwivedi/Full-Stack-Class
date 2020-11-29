@@ -1,0 +1,111 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f18c8e;
+}
+.container{
+    width:500px;
+    background-color: white;
+    height:500px;
+    border-radius: 10px;;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding:10px;
+}
+h1{
+    text-align: center;
+    color: grey;
+}
+.input{
+    margin: 15px;
+    height:30px;
+    border:none;
+    outline:none;
+    border-bottom:1px solid black;
+    width: 450px;
+}
+#form small{
+    font-weight: bolder;
+    margin:5px;
+    margin-left:10px;
+    color: red;
+    visibility: hidden;
+}
+.name{
+    display: flex;
+    /* border:1px solid black; */
+}
+.email{
+    display: flex;
+}
+.password{
+    display: flex;
+}
+.confirm-password{
+    display: flex;
+}
+.name i{
+    margin:0px;
+    position: absolute;
+    right:550px;
+    text-align: center;
+    top:190px;
+    visibility: hidden;
+}
+.email i{
+    margin:0px;
+    position: absolute;
+    right:550px;
+    text-align: center;
+    top:275px;
+    visibility: hidden;
+}
+.password i{
+    margin:0px;
+    position: absolute;
+    right:550px;
+    text-align: center;
+    top:365px;
+    visibility: hidden;
+}
+.confirm-password i{
+    margin:0px;
+    position: absolute;
+    right:550px;
+    text-align: center;
+    top:450px;
+    visibility: hidden;
+}
+#submit-btn{
+    width:200px;
+    height:40px;
+    text-align: center;
+    margin:20px auto;
+    border:none;
+    outline:none;
+    background-color: #568ea6;
+    border-radius:5px;
+    color:white;
+}
+#submit-btn:hover{
+    width:200px;
+    height:40px;
+    text-align: center;
+    margin:20px auto;
+    border:none;
+    outline:none;
+    background-color: rgb(0, 255, 157);
+    border-radius:5px;
+    color:white;
+}

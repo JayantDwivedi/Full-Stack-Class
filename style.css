@@ -1,0 +1,106 @@
+body {
+    background: url("images/bg-index.jpg");
+}
+
+.container {
+    background-color: white;
+    padding: 2%;
+    margin-left: 8%;
+    margin-right: 8%;
+    text-align: center;
+    box-shadow: 5px 5px 5px rgb(196, 191, 191);
+}
+
+.container>h1 {
+    font-size: 40px;
+}
+
+.container>h2 {
+    font-size: 32px;
+}
+
+.container>p {
+    font-size: 25px;
+    text-align: justify;
+}
+
+.notification>a {
+    display: inline-block;
+    color: red;
+    border: 2px solid red;
+    padding: 1.5%;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.notification>a:hover {
+    display: inline-block;
+    color: green;
+    border: 2px solid green;
+    padding: 2%;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+th {
+    text-align: center;
+}
+
+tr,
+td,
+th {
+    border-bottom: 2px solid rgb(156, 149, 149);
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+
+table {
+    border: 2px solid black;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    text-align: justify;
+
+}
+
+tr {
+    border-left: 2px solid black;
+}
+
+th {
+    font-weight: bold;
+
+    font-size: 24px;
+}
+
+#topic {
+    text-align: center;
+    background-color: rgb(15, 15, 49);
+    color: white;
+    font-size: 30px;
+}
+
+tr:hover {
+    background-color: #f6f6f6;
+}
+
+td a {
+    text-decoration: none;
+    color: black;
+}
+
+td a:hover {
+    text-decoration: none;
+    color: blue;
+}

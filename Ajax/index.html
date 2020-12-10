@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>jQuery | Ajax</title>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <link rel="stylesheet" href="bootstrap.min.css" />
+</head>
+
+<body>
+  <div class="container mt-3">
+    <h1 class="text-center">jQuery | Ajax</h1>
+    <hr />
+
+    <!-- Buttons-->
+    <button class="loadData btn btn-primary mt-3">Load Data</button>
+    <button class="getData btn btn-success mt-3">Get Data</button>
+    <button class="jsonData btn btn-warning mt-3">JSON Data</button>
+    <button class="serverData btn btn-danger mt-3">Server Data</button>
+    <br />
+    <br />
+    <h3>LOADING DATA......!!</h3>
+    <!-- Data Divs -->
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <ul id="users"></ul>
+    <div id="result3"></div>
+
+    <hr />
+
+    <!-- Post Form -->
+    <h3>Post Data</h3>
+    <form id="postForm" action="https://jsonplaceholder.typicode.com/posts">
+      <div class="form-group w-50">
+        <input class="form-control" type="text" id="title" placeholder="Title" /><br />
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" placeholder="Body" id="body"></textarea><br />
+      </div>
+
+      <input type="submit" class="btn btn-info" value="Submit" />
+    </form>
+  </div>
+
+  <!-- Jquery Scripts for Ajax -->
+
+  <script>
+    $(document).ready(function () {
+      // 1. Load Method
+      $(".loadData").click(function () {
+        $("#result1").load(
+          "test.html",
+          function (responseTxt, statusTxt, xhr) {
+            if (statusTxt == "success") {
+              console.log("Data Load Successfully " + xhr.status);
+            } else if (statusTxt == "error") {
+              console.log("There is an Error " + xhr.statusText);
+            }
+          }
+        );
+      });
+
+      // 2. get() Method
+
+      $(".getData").click(function () {
+        $.get("test.html", function (data) {
+          $("#result2").html(data);
+        });
+      });
+
+      //3. getJSON() Method
+
+      $(".jsonData").click(function () {
+        $.getJSON("users.json", function (data) {
+          // we are using repatative structure
+          $.each(data, function (i, user) {
+            $("ul#users").append("<li>" + user.firstName +
+              "</li>"); // calling the object and store with unordered list.
+          });
+        });
+      });
+
+      //4. ajax() Method
+
+      $(".serverData").click(function () {
+        $.ajax({
+          type: "GET",
+          url: "https://jsonplaceholder.typicode.com/posts",
+          dataType: "json",
+          success: function (data) {
+            console.log(data);
+            $.each(data, function (i, post) {
+              if (i == 3)
+                return false;
+              $("#result3").append(
+                "<h3>" + post.title + "</h3><p>" + post.body + "</p>"
+              );
+            });
+          },
+        });
+      });
+
+      //5. Post() Method
+      $('#postForm').submit(function (e) {
+        e.preventDefault();
+
+        var title = $('#title').val();
+        var body = $('#body').val();
+        var url = $(this).attr('action');
+
+        $.post(url, {
+          title: title,
+          body: body
+        }, function (data) {
+          console.log("Data Posted");
+          console.log(data);
+        });
+
+      });
+
+
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Methods</title>
+    <script src="../Jquery/jquery.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container mt-3">
+        <h1 class="text-center">JQuey Methods</h1>
+        <h3 class="text-center">Getter & Setter</h3>
+        <hr>
+
+        <div class="box border border-dark p-3 mb-4">
+            <h3 class="text-center">Text Heading</h3>
+            <p class="text-justify">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, nulla! Doloribus quasi exercitationem
+                dolore
+                magnam nam, delectus est odio non dolores sequi qui fugiat ea ut blanditiis provident minima doloremque!
+                Quam qui dolore illum asperiores nobis quis hic beatae maxime quas repudiandae quod tempora veniam,
+                autem
+                vel voluptatum enim fuga.
+            </p>
+        </div>
+        <button class="setter btn btn-danger mt-3 mb-3">Setter</button>
+
+        <form id="myform">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" id="email" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" id="pass" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            // get text of particular section
+            var a = $('.box p').text();
+            // console.log(a);
+
+            // to get the html code of particular section
+            var b = $('.box').html();
+            // console.log(b);
+
+            // to get the attriute
+            var c = $('.box').attr('class');
+            // console.log(c);
+
+            // value method generally perform on form element
+            $('#myform').submit(function () {
+                var email = $('#email').val();
+                var pas = $('#pass').val();
+                console.log(email);
+                console.log(pass);
+            });
+
+
+            // Setter Methods
+            // All the getter methods act as setter when we pass argument
+            $('.setter').click(function () {
+                $('.box h3').text("Heading Changed"); // changing the heading of the paragarph
+                $('.box p').html("I am Changing this paragraph<br><a href="
+                    ">link</a>"); // giveing some error
+
+                $('.box a').attr('href', 'https//www.beta-labs.in');
+            });
+
+
+        });
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

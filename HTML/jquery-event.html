@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Event</title>
+    <script src="../Jquery/jquery.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div class="container mt-3">
+        <h1 class="text-center">JQuery Event</h1>
+        <hr>
+        <h2>1. Mouse Event</h2>
+        <div class="box text-center p-3 mt-3 border border-dark">
+            <div class="text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque possimus vel corrupti quasi! Eius hic in
+                laborum asperiores, consequuntur aut laudantium maiores! Sunt ex aliquam ullam quos nostrum aperiam
+                eligendi repellat laborum quisquam obcaecati consectetur reiciendis aliquid placeat blanditiis
+                distinctio maxime eius consequuntur voluptas eveniet temporibus, quam molestias minima iusto?
+            </div>
+        </div>
+        <hr>
+        <h2>2. Keyboard Event</h2>
+        <ul class="list-unstyled text-center border border-muted">
+            <li>KeyPress - All Textual Key</li>
+            <li>KeyUp - All keys</li>
+            <li>KeyDown - All FUnctional keys</li>
+        </ul>
+        <hr>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // single click
+            $('.box').click(function () {
+                $('.box').css('background-color', 'lightpink');
+            });
+
+            // double click 
+            $('.box').dblclick(function () {
+                $(this).css('background-color', 'skyblue');
+            });
+
+            // Right click
+            $('.box').contextmenu(function () {
+                $('.box').css({
+                    'background-color': 'orange',
+                    'color': 'white'
+                });
+            });
+
+            // mouse enter
+            $('.box').mouseenter(function () {
+                $('.box').css({
+                    'background-color': 'grey',
+                    'color': 'white'
+                });
+            });
+
+            // mouse leave
+            $('.box').mouseleave(function () {
+                $(this).css({
+                    'background-color': 'lightgreen',
+                    'color': 'black'
+                });
+            });
+
+            // Keyboard Event 
+            //key press
+            $('body').keypress(function () {
+                $(this).css(
+                    'background-color', '#40E0D0'
+                );
+            });
+
+            // Keyup   key release
+            $('body').keyup(function () {
+                $(this).css(
+                    'background-color', '#FF69B4'
+                );
+            });
+
+            // keydown
+            // functional keys 
+            $('body').keydown(function () {
+                $(this).css(
+                    'background-color', '#ADFF2F'
+                );
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

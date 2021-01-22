@@ -1,0 +1,118 @@
+// command 2
+db.user.insert({
+    userid: 1,
+    username: ["www.github.com/jayant", "www.linkedin.com/jayantdwivedi", "www.facebook.com/jayantdwivedi"],
+    password: "something",
+    email_id: "jayant.gla_cs18@gla.ac.in",
+    followers: 323,
+    status: "active"
+});
+
+// command 3
+db.user.insert([{
+    userid: 2,
+    username: ["kartik", "kartik varshney", "kartik facebook"],
+    password: "something",
+    email_id: "kv_cs18@gla.ac.in",
+    followers: 329,
+    status: "active"
+}, {
+    userid: 3,
+    username: ["hitesh", "hitesh sharma", "hitesh facebook"],
+    password: "something",
+    email_id: "hitesh_cs17@gla.ac.in",
+    followers: 322,
+    status: "Inactive"
+}]);
+
+db.user.insertOne({
+    userid: 4,
+    username: ["rajat", "rajat linkedin", "rajat facebook"],
+    password: "kuch to hai",
+    email_id: "rajat_agrawal@gla.ac.in",
+    followers: 20,
+    status: "active"
+});
+
+db.user.insertMany([{
+    userid: 5,
+    username: ["jai github", "jai linkedin", "jai facebook"],
+    password: "kuch_cs",
+    email_id: "jaisharama@gla.ac.in",
+    followers: 22,
+    status: "Inactive"
+}, {
+    userid: 6,
+    username: ["harh github", "harh linkedin", "harh facebook"],
+    password: "harsh_cs",
+    email_id: "harhsvardhan@gla.ac.in",
+    followers: 45,
+    status: "active"
+}, {
+    userid: 6,
+    username: ["ram github", "ram linkedin", "ram facebook"],
+    password: "ramvarma",
+    email_id: "ramshyam@gla.ac.in",
+    followers: 223,
+    status: "active"
+}, {
+    userid: 7,
+    username: ["harshit github", "harishit linkedin", "harishit facebook"],
+    password: "harshit_cs",
+    email_id: "harishit_shukla@gla.ac.in",
+    followers: 422,
+    status: "active"
+}, {
+    userid: 8,
+    username: ["aman github", "aman linkedin", "aman facebook"],
+    password: "kucaman ",
+    email_id: "aman@gla.ac.in",
+    followers: 222,
+    status: "Inactive"
+}, {
+    userid: 9,
+    username: ["pawan github", "pawan linkedin", "pawan facebook"],
+    password: "kuchaman ",
+    email_id: "pawan@gla.ac.in",
+    followers: 324,
+    status: "active"
+}, {
+    userid: 10,
+    username: ["yashi github", "yashi linkedin", "yashi facebook"],
+    password: "kuchyashi ",
+    email_id: "yashi@gla.ac.in",
+    followers: 340,
+    status: "Inactive"
+}]);
+
+// command 4
+db.user.find()[3];
+
+// command 5
+db.user.find().forEach(printjson);
+
+// command 6
+db.user.find({
+    follower: {
+        $gt: 50
+    }
+});
+
+// command 7 
+db.user.find({}, {
+    username: 1,
+    email_id: 1,
+    followers: 1
+}).skip(5);
+
+// command 8 
+db.user.find({
+    status: "Inactive",
+    $or: [{
+        password: ""
+    }, {
+        followers: {
+            $lt: 10
+        }
+    }]
+});

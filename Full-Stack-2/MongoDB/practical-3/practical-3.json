@@ -1,0 +1,104 @@
+// command 1
+
+db.students.update({
+    name: "pankaj"
+}, {
+    $set: {
+        name: "Pankaj"
+    }
+}, {
+    multi: true
+});
+
+WriteResult({
+        "nMatched": 2,
+        "nUpserted": 0,
+        "nModified": 2
+    })
+
+    // command 2 
+    >
+    db.students.save({
+        "_id": ObjectId("60127a1e647e3f0d701333b1"),
+        "name": "Pankaj",
+        "lastName": "sharma",
+        "age": 24,
+        "averageScore": 3.4,
+        "id": 19,
+        "sec": "D",
+        "gender": "male"
+    });
+WriteResult({
+    "nMatched": 1,
+    "nUpserted": 0,
+    "nModified": 1
+})
+
+// command 3
+
+db.students.updateMany({}, {
+    $set: {
+        address: {
+            hno: null,
+            city: null,
+            pincode: null,
+            state: null
+        }
+    }
+});
+
+{
+    "acknowledged": true,
+    "matchedCount": 20,
+    "modifiedCount": 20
+}
+
+// command 4
+db.students.updateMany({}, {
+    $rename: {
+        averageScore: "Score"
+    }
+});
+
+{
+    "acknowledged": true,
+    "matchedCount": 20,
+    "modifiedCount": 20
+}
+
+// command 5
+db.students.updateMany({}, {
+    $unset: {
+        "address.state": null
+    }
+});
+
+{
+    "acknowledged": true,
+    "matchedCount": 20,
+    "modifiedCount": 20
+}
+
+// command 6 
+
+db.students.deleteOne({
+    sec: "D"
+});
+
+{
+    "acknowledged": true,
+    "deletedCount": 1
+}
+
+// command 7
+
+db.students.deleteMany({
+    age: {
+        $gt: 25
+    }
+});
+
+{
+    "acknowledged": true,
+    "deletedCount": 2
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "name": "priya",
+    "lastName": "gupta",
+    "age": 17,
+    "averageScore": 8.4,
+    "id": 1,
+    "sec": "A",
+    "gender": "female"
+  },
+  {
+    "name": "shyam",
+    "lastName": "rana",
+    "age": 17,
+    "averageScore": 5.4,
+    "id": 2,
+    "sec": "B",
+    "gender": "male"
+  },
+  {
+    "name": "kamal",
+    "lastName": "sharma",
+    "age": 11,
+    "averageScore": 6.4,
+    "id": 3,
+    "sec": "A",
+    "gender": "male"
+  },
+  {
+    "name": "sachin",
+    "lastName": "yadav",
+    "age": 19,
+    "averageScore": 2.4,
+    "id": 4,
+    "sec": "B",
+    "gender": "male"
+  },
+  {
+    "name": "varsha",
+    "lastName": "kumari",
+    "age": 14,
+    "averageScore": 6.4,
+    "id": 5,
+    "sec": "A",
+    "gender": "female"
+  },
+  {
+    "name": "priya",
+    "lastName": "rana",
+    "age": 12,
+    "averageScore": 5.4,
+    "id": 6,
+    "sec": "A",
+    "gender": "female"
+  },
+  {
+    "name": "manish",
+    "lastName": "kumar",
+    "age": 17,
+    "averageScore": 1.4,
+    "id": 7,
+    "sec": "B",
+    "gender": "male"
+  },
+  {
+    "name": "sachin",
+    "lastName": "sharma",
+    "age": 20,
+    "averageScore": 9.4,
+    "id": 8,
+    "sec": "B",
+    "gender": "male"
+  },
+  {
+    "name": "pankaj",
+    "lastName": "Davis",
+    "age": 21,
+    "averageScore": 3.4,
+    "id": 9,
+    "sec": "B",
+    "gender": "male"
+  },
+  {
+    "name": "manish",
+    "lastName": "yadav",
+    "age": 30,
+    "averageScore": 5.4,
+    "id": 10,
+    "sec": "C",
+    "gender": "male"
+  },
+  {
+    "name": "parul",
+    "lastName": "gupta",
+    "age": 17,
+    "averageScore": 8.4,
+    "id": 11,
+    "sec": "A",
+    "gender": "female"
+  },
+  {
+    "name": "sneha",
+    "lastName": "rana",
+    "age": 37,
+    "averageScore": 5.4,
+    "id": 12,
+    "sec": "B",
+    "gender": "female"
+  },
+  {
+    "name": "divya",
+    "lastName": "sharma",
+    "age": 11,
+    "averageScore": 6.4,
+    "id": 13,
+    "sec": "C",
+    "gender": "female"
+  },
+  {
+    "name": "sonali",
+    "lastName": "yadav",
+    "age": 19,
+    "averageScore": 5.4,
+    "id": 14,
+    "sec": "D",
+    "gender": "female"
+  },
+  {
+    "name": "varsh",
+    "lastName": "kumar",
+    "age": 14,
+    "averageScore": 6.4,
+    "id": 15,
+    "sec": "C",
+    "gender": "male"
+  },
+  {
+    "name": "priyaka",
+    "lastName": "rana",
+    "age": 12,
+    "averageScore": 5.4,
+    "id": 16,
+    "sec": "D",
+    "gender": "female"
+  },
+  {
+    "name": "manisha",
+    "lastName": "rani",
+    "age": 17,
+    "averageScore": 1.4,
+    "id": 17,
+    "sec": "C",
+    "gender": "female"
+  },
+  {
+    "name": "Tanya",
+    "lastName": "sharma",
+    "age": 22,
+    "averageScore": 9.4,
+    "id": 18,
+    "sec": "C",
+    "gender": "female"
+  },
+  {
+    "name": "pankaj",
+    "lastName": "sharma",
+    "age": 24,
+    "averageScore": 3.4,
+    "id": 19,
+    "sec": "D",
+    "gender": "male"
+  },
+  {
+    "name": "sanjana",
+    "lastName": "yadav",
+    "age": 20,
+    "averageScore": 5.4,
+    "id": 20,
+    "sec": "D",
+    "gender": "female"
+  }
+]

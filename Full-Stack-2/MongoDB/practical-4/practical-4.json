@@ -1,0 +1,114 @@
+// Activity -2 
+>
+db.student.aggregate([{
+        $match: {
+            gender: "male",
+            sec: "B"
+        }
+    }, {
+        $project: {
+            name: 1,
+            _id: 0
+        }
+    }]) {
+        "name": "shyam"
+    } {
+        "name": "sachin"
+    } {
+        "name": "manish"
+    } {
+        "name": "sachin"
+    } {
+        "name": "pankaj"
+    }
+
+    // Activity-3
+
+    >
+    db.student.aggregate([{
+        $group: {
+            _id: "$sec",
+            avg: {
+                $avg: "$averageScore"
+            }
+        }
+    }]) {
+        "_id": "D",
+        "avg": 4.9
+    } {
+        "_id": "B",
+        "avg": 4.566666666666666
+    } {
+        "_id": "C",
+        "avg": 5.8
+    } {
+        "_id": "A",
+        "avg": 7
+    }
+
+    >
+    db.student.aggregate([{
+        $group: {
+            _id: "$gender",
+            count: {
+                $sum: 1
+            }
+        }
+    }]) {
+        "_id": "male",
+        "count": 9
+    } {
+        "_id": "female",
+        "count": 11
+    }
+
+    // Activity -4
+    >
+    db.student.aggregate([{
+        $match: {
+            gender: "female"
+        }
+    }, {
+        $group: {
+            _id: "$sec",
+            count: {
+                $sum: 1
+            }
+        }
+    }]); {
+    "_id": "B",
+    "count": 1
+} {
+    "_id": "C",
+    "count": 3
+} {
+    "_id": "D",
+    "count": 3
+} {
+    "_id": "A",
+    "count": 4
+}
+
+
+// Activity-5
+>
+db.student.aggregate([
+    ...{
+        $group: {
+            _id: "$sec",
+            count: {
+                $sum: 1
+            }
+        }
+    },
+    ...{
+        $limit: 2
+    }
+    ...
+]); {
+    "_id": "B",
+    "count": 6
+} {
+    "_id": "C",
+    "count": 5
+}

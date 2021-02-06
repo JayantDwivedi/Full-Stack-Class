@@ -1,0 +1,41 @@
+// Activity 1
+
+>
+db.Student1.aggregate([
+    ...{
+        $match: {
+            sports: "cricket"
+        }
+    },
+    ...{
+        $project: {
+            name: 1,
+            _id: 0
+        }
+    }
+    ...
+]); {
+    "name": "priya"
+} {
+    "name": "kamal"
+} {
+    "name": "sachin"
+} {
+    "name": "manish"
+} {
+    "name": "sachin"
+} {
+    "name": "pankaj"
+} {
+    "name": "manish"
+} {
+    "name": "sneha"
+} {
+    "name": "sonali"
+} {
+    "name": "varsh"
+} {
+    "name": "Tanya"
+} {
+    "name": "pankaj"
+}

@@ -39,3 +39,110 @@ db.Student1.aggregate([
 } {
     "name": "pankaj"
 }
+
+// Activity 2 
+
+db.Student1.aggregate([{
+        $group: {
+            _id: "$sec",
+            average: {
+                "$avg": "$averageScore"
+            }
+        }
+    },
+    {
+        $sort: {
+            average: -1
+        }
+    }
+
+]);
+
+{
+    "_id": "A",
+    "average": 7
+} {
+    "_id": "C",
+    "average": 5.8
+} {
+    "_id": "D",
+    "average": 4.9
+} {
+    "_id": "B",
+    "average": 4.566666666666666
+}
+
+// Activity 3
+
+>
+db.Student1.aggregate([{
+        $match: {
+            gender: "female"
+        }
+    },
+    {
+        $group: {
+            _id: "$sec",
+            count: {
+                $sum: 1
+            }
+        }
+    },
+    {
+        $skip: 1
+    },
+    {
+        $limit: 2
+    }
+]); {
+    "_id": "D",
+    "count": 3
+} {
+    "_id": "A",
+    "count": 4
+}
+
+// Activity 4
+
+db.Student1.createIndex({
+    id: 1
+}, {
+    unique: true
+}); {
+    "createdCollectionAutomatically": false,
+    "numIndexesBefore": 1,
+    "numIndexesAfter": 2,
+    "ok": 1
+}
+
+
+
+db.Student1.explain().find({
+    id: 1
+});
+
+db.Student1.dropIndex({
+    id: 1
+}) {
+    "nIndexesWas": 2,
+    "ok": 1
+}
+
+
+// Activty 5
+
+db.Student1.aggregate([
+    ...{
+        $out: "Student_new"
+    }
+    ...
+]);
+
+db.Student1.drop();
+true
+
+db.Student_new.aggregate([{
+    $out: "Student1"
+}]);
+
+mongodump--db practical - 4--collection Student1--out C: \Full - Stack - Class\ Full - Stack - 2\ Mongo\ backup

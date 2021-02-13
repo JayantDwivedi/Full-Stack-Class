@@ -10,7 +10,10 @@ mongoose.connect("mongodb://127.0.0.1:27017/blogger", {
 
 // Step 3: Create Schema
 const bloggerSchema = new mongoose.Schema({
-    authorName: String,
+    authorName: {
+        type: String,
+        require: [true, "Name require"],
+    }
     email: String,
     date: {
         type: Date,

@@ -1,4 +1,7 @@
 import './App.css'          // adding link of external css file 
+import myFunctionalComponent from "./component/functionalComponent";
+import functionalComponent from './component/functionalComponent';
+
 
 const name = "Jayant"          // declare as a variable
 const boolean = true;
@@ -45,6 +48,9 @@ function App() {
       {/* adding whole list as element */}
       <h3>Course Topics</h3>
       {element}
+
+      <h1>Functional Component</h1>
+      <myfunctionalComponent />
     </div>
   );
 }

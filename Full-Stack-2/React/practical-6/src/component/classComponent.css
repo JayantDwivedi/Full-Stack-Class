@@ -1,0 +1,21 @@
+#root-class {
+    background-color: lightblue;
+    width:70%;
+    margin:auto;
+    border-radius:20px;
+    text-align: center;
+    
+    padding:30px;
+    margin-bottom:20px;
+}
+
+.red-class {
+    color:red;
+}
+
+.blue-class {
+    color:blue;
+    background-color: yellow;
+    padding:5px;
+    border-radius:5px;
+}

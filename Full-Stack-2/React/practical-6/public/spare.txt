@@ -1,0 +1,19 @@
+{/* name as varibale  */}
+      {/* using internal css  */}
+      <h1>Hello <span style={cssStyle}>{name}</span></h1>
+
+      {/* boolean as variable and condition  */}
+      <h2>I am a {boolean == 1 ? "Good" : "Wrong"} Person.</h2>
+
+      {/* link as variable and imageSource as variable    */}
+      <a href={link}>
+        <img src={imageSource} alt="Goto webinar image" />
+      </a>
+
+      {/* adding whole list as element */}
+      <h3>Course Topics</h3>
+      {element} 
+
+
+
+      Paste inside app.js inside app div

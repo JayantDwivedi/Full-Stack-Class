@@ -1,0 +1,22 @@
+#root-function {
+    background-color: lightpink;
+    width:70%;
+    margin:auto;
+    border-radius:20px;
+    text-align: center;
+    padding:30px;
+    margin-top:10px;
+    margin-bottom:20px;
+
+}
+
+.red-function {
+    color:red;
+}
+
+.blue-function {
+    color:blue;
+    background-color: yellow;
+    padding:5px;
+    border-radius:5px;
+}

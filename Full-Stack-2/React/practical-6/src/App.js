@@ -1,6 +1,7 @@
 import './App.css'          // adding link of external css file 
-import myFunctionalComponent from "./component/functionalComponent";
-import functionalComponent from './component/functionalComponent';
+import FunctionalComponent from './component/functionalComponent';
+import ClassComponent from './component/classComponent';
+import ReactState from './component/ReactState';
 
 
 const name = "Jayant"          // declare as a variable
@@ -33,24 +34,13 @@ const cssStyle = {
 function App() {
   return (                     // using variable in document
     <div className="App">
-      {/* name as varibale  */}
-      {/* using internal css  */}
-      <h1>Hello <span style={cssStyle}>{name}</span></h1>
+      <FunctionalComponent
+        name="Jayant" />
 
-      {/* boolean as variable and condition  */}
-      <h2>I am a {boolean == 1 ? "Good" : "Wrong"} Person.</h2>
+      <ClassComponent rollno="27" />
 
-      {/* link as variable and imageSource as variable    */}
-      <a href={link}>
-        <img src={imageSource} alt="Goto webinar image" />
-      </a>
+      <ReactState rollno="23" name="kartik" />
 
-      {/* adding whole list as element */}
-      <h3>Course Topics</h3>
-      {element}
-
-      <h1>Functional Component</h1>
-      <myfunctionalComponent />
     </div>
   );
 }

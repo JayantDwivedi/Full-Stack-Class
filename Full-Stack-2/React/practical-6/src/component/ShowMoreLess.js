@@ -7,7 +7,8 @@ export default class ShowMoreLess extends Component {
     super();
     this.state = {
       data: "",
-      msg: "Read More",
+      toggle: true,
+      buttonText: "Read More",
     };
     console.log("Inside Constructor");
   }
@@ -22,13 +23,14 @@ export default class ShowMoreLess extends Component {
 
   // function show more
   more = () => {
-    if (this.state.msg == "Read More") {
+    if (this.state.toggle) {
       this.setState({
         data: "This is the toggled content press button and enjoy !!!",
-        msg: "Read Less",
+        buttonText: "Read Less",
+        toggle: false,
       });
     } else {
-      this.setState({ data: "", msg: "Read More" });
+      this.setState({ data: "", buttonText: "Read More", toggle: true });
     }
   };
 
@@ -38,7 +40,7 @@ export default class ShowMoreLess extends Component {
         <h1>Beta Labs</h1>
         <h4>Click the button to Show More|Less</h4>
         <p style={{ color: "blue" }}>{this.state.data}</p>
-        <button onClick={this.more}>{this.state.msg}</button>
+        <button onClick={this.more}>{this.state.buttonText}</button>
       </div>
     );
   }

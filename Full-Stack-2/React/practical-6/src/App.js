@@ -1,12 +1,16 @@
-import './App.css'          // adding link of external css file 
-import FunctionalComponent from './component/functionalComponent';
-import ClassComponent from './component/classComponent';
-import ReactState from './component/ReactState';
+import "./App.css"; // adding link of external css file
+import FunctionalComponent from "./component/functionalComponent";
+import ClassComponent from "./component/classComponent";
+import ReactState from "./component/ReactState";
 
+// importing for practical -8
+import Counter from "./component/Counter";
+import ShowMoreLess from "./component/ShowMoreLess";
 
-const name = "Jayant"          // declare as a variable
+const name = "Jayant"; // declare as a variable
 const boolean = true;
-const imageSource = "https://app.gotowebinar.com/4.8.3-pre.1/images/gtw-logo-32.png";
+const imageSource =
+  "https://app.gotowebinar.com/4.8.3-pre.1/images/gtw-logo-32.png";
 const link = "https://www.gotowebinar.com";
 
 const element = (
@@ -19,28 +23,24 @@ const element = (
   </ol>
 );
 
-// React follow camelCase character 
+// React follow camelCase character
 const cssStyle = {
-  color: 'red',
-  backgroundColor: 'yellow',
-  display: 'inlineBlock',
-  padding: '5px',
-  borderRadius: '10px',
-}
-
-
-
+  color: "red",
+  backgroundColor: "yellow",
+  display: "inlineBlock",
+  padding: "5px",
+  borderRadius: "10px",
+};
 
 function App() {
-  return (                     // using variable in document
+  return (
+    // using variable in document
     <div className="App">
-      <FunctionalComponent
-        name="Jayant" />
-
-      <ClassComponent rollno="27" />
-
-      <ReactState rollno="23" name="kartik" />
-
+      <h1>Question 8-A</h1>
+      <Counter />
+      <hr />
+      <h1>Question 8-B</h1>
+      <ShowMoreLess />
     </div>
   );
 }

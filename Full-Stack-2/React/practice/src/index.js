@@ -40,14 +40,11 @@ import "./index.css";
 // Mini Book Store
 // with nesting of other components
 
+const title = "Book 1";
+const author = "Mr. X";
 function MiniBook() {
   return (
     <div>
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
       <Book />
       <Book />
     </div>
@@ -57,26 +54,15 @@ function MiniBook() {
 // Main Component
 const Book = () => {
   return (
-    <div className="booklist">
-      <Image />
-      <Title />
-      <Author />
-    </div>
+    <article className="booklist">
+      <img
+        src="https://m.media-amazon.com/images/I/91CQ7MCHIfL._AC_UY327_FMwebp_QL65_.jpg"
+        alt="image of a book"
+      />
+      <h1>{title}</h1>
+      <h4>Sadguru</h4>
+    </article>
   );
 };
-
-// Title implicit Component
-const Title = () => <h1>Karma</h1>;
-
-// Image component
-const Image = () => (
-  <img
-    src="https://m.media-amazon.com/images/I/91CQ7MCHIfL._AC_UY327_FMwebp_QL65_.jpg"
-    alt="image of a book"
-  />
-);
-
-// Author implicit Component
-const Author = () => <h4>Sadguru</h4>;
 
 ReactDom.render(<MiniBook />, document.getElementById("root"));

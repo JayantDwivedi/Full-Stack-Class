@@ -40,26 +40,41 @@ import "./index.css";
 // Mini Book Store
 // with nesting of other components
 
+// passing props in from of object
+const thirdBook = {
+  title: "One Arranged Marrige",
+  author: "Chetan Bhagat",
+  image:
+    "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FI%2F61r-WomIz0L.jpg&imgrefurl=https%3A%2F%2Fwww.amazon.in%2FOne-Arranged-Murder-Chetan-Bhagat%2Fdp%2F1542094135&tbnid=fRPXZJQpXytgdM&vet=12ahUKEwju_Zqag4jvAhUYCXIKHdcmAAAQMygAegUIARCbAQ..i&docid=qLGWBD9qaIBoXM&w=660&h=1057&q=one%20arranged%20marriage&ved=2ahUKEwju_Zqag4jvAhUYCXIKHdcmAAAQMygAegUIARCbAQ",
+};
+
+// use of javascript jsx
 const title = "Book 1";
 const author = "Mr. X";
+const img =
+  "https://m.media-amazon.com/images/I/91CQ7MCHIfL._AC_UY327_FMwebp_QL65_.jpg";
+
 function MiniBook() {
   return (
     <div>
-      <Book />
-      <Book />
+      <Book image={img} title="Book Another" />
+      <Book image={img} title="Book Previous" author="Jayant Dwivedi" />
+      <Book
+        title={thirdBook.title}
+        image={thirdBook.image}
+        author={thirdBook.author}
+      />
     </div>
   );
 }
 
 // Main Component
-const Book = () => {
+const Book = (props) => {
   return (
     <article className="booklist">
-      <img
-        src="https://m.media-amazon.com/images/I/91CQ7MCHIfL._AC_UY327_FMwebp_QL65_.jpg"
-        alt="image of a book"
-      />
-      <h1>{title}</h1>
+      <img src={props.image} alt="image of a book" />
+      <h1>{props.title}</h1>
+      <h4>{props.author}</h4>
       <h4>Sadguru</h4>
     </article>
   );

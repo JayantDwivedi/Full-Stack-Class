@@ -69,12 +69,12 @@ function MiniBook() {
 }
 
 // Main Component
-const Book = (props) => {
+const Book = ({ image, author, title }) => {
   return (
     <article className="booklist">
-      <img src={props.image} alt="image of a book" />
-      <h1>{props.title}</h1>
-      <h4>{props.author}</h4>
+      <img src={image} alt="image of a book" />
+      <h1>{title}</h1>
+      <h4>{author}</h4>
       <h4>Sadguru</h4>
     </article>
   );

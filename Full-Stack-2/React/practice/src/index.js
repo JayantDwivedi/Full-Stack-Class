@@ -64,18 +64,31 @@ function MiniBook() {
         image={thirdBook.image}
         author={thirdBook.author}
       />
+
+      {/* Adding this book has description others don't 
+      with the use of props children  we use opening and closing tags instead of self closing*/}
+      <Book title={thirdBook.title} image={img} author={thirdBook.author}>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
+          facilis, nobis ea aperiam in suscipit laboriosam nulla animi accusamus
+          eveniet.
+        </p>
+      </Book>
     </div>
   );
 }
 
 // Main Component
-const Book = ({ image, author, title }) => {
+const Book = ({ image, author, title, children }) => {
   return (
     <article className="booklist">
       <img src={image} alt="image of a book" />
       <h1>{title}</h1>
       <h4>{author}</h4>
       <h4>Sadguru</h4>
+
+      {/* name is special  */}
+      {children}
     </article>
   );
 };

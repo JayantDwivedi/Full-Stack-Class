@@ -129,12 +129,39 @@ function MiniBook() {
 const Book = (props) => {
   console.log(props);
   const { img, title, author } = props.book; // if you are using spread operator then use props instead of props.book
+
+  // attribute, eventHandler
+  // onClick, onMouseOver
+  const clickHandler = (e) => {
+    console.log(e);
+    console.log(e.target);
+    alert("Hello World");
+  };
+
+  // event handler with arguments
+  const complexExample = (author) => {
+    console.log(author);
+  };
   return (
     <>
-      <article className="booklist">
+      <article
+        className="booklist"
+        onMouseOver={() => {
+          console.log(title);
+        }}
+      >
         <img src="{img}" />
         <h1>{title}</h1>
         <h4>{author}</h4>
+        <button type="button" onClick={clickHandler}>
+          Reference Example
+        </button>
+        <button type="button" onClick={() => console.log(title)}>
+          Title in console
+        </button>
+        <button type="button" onClick={() => complexExample(author)}>
+          Author in Console with Args
+        </button>
       </article>
     </>
   );

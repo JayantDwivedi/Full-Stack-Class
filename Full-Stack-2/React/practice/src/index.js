@@ -110,7 +110,7 @@ function MiniBook() {
       {/* using of object as props  */}
       {books.map((book) => {
         const { img, title, author } = book;
-        return <Book key={book.id} book={book}></Book>;
+        return <Book key={book.id} book={book}></Book>; // you can pass like {...books}(spread operator)
       })}
     </div>
   );
@@ -128,7 +128,7 @@ function MiniBook() {
 // Main Component
 const Book = (props) => {
   console.log(props);
-  const { img, title, author } = props.book;
+  const { img, title, author } = props.book; // if you are using spread operator then use props instead of props.book
   return (
     <>
       <article className="booklist">

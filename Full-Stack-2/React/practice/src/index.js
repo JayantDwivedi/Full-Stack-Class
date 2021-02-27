@@ -58,18 +58,21 @@ import "./index.css";
 // after making this we just simply add data into this objects
 const books = [
   {
+    id: 1,
     img:
       "https://images-na.ssl-images-amazon.com/images/I/51RyuFPuxjL._AC_SX184_.jpg",
     title: "Young Gift and Black",
     author: "Jamia Wilson",
   },
   {
+    id: 2,
     img:
       "https://images-na.ssl-images-amazon.com/images/I/51zaYM+my1L._AC_SX184_.jpg",
     title: "Antiracist Baby Picture",
     author: "Ibram X. Kendi Ashley",
   },
   {
+    id: 3,
     img:
       "https://images-na.ssl-images-amazon.com/images/I/51Tlm0GZTXL._AC_SX184_.jpg",
     title: "Atomic Habits",
@@ -107,7 +110,7 @@ function MiniBook() {
       {/* using of object as props  */}
       {books.map((book) => {
         const { img, title, author } = book;
-        return <Book book={book}></Book>;
+        return <Book key={book.id} book={book}></Book>;
       })}
     </div>
   );

@@ -6,6 +6,7 @@ import ReactState from "./component/ReactState";
 // importing for practical -8
 import Counter from "./component/Counter";
 import ShowMoreLess from "./component/ShowMoreLess";
+import ReactHooks from "./component/ReactHooks";
 
 const name = "Jayant"; // declare as a variable
 const boolean = true;
@@ -36,11 +37,13 @@ function App() {
   return (
     // using variable in document
     <div className="App">
-      <h1>Question 8-A</h1>
+      {/* <h1>Question 8-A</h1>
       <Counter />
       <hr />
       <h1>Question 8-B</h1>
-      <ShowMoreLess />
+      <ShowMoreLess /> */}
+
+      <ReactHooks />
     </div>
   );
 }

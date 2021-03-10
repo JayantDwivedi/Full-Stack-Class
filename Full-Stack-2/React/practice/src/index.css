@@ -5,9 +5,9 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: #f1f1f5f8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: #f1f5f8;
   color: #222;
 }
 
@@ -17,30 +17,31 @@ body {
   margin: 5rem auto;
   display: grid;
   gap: 2rem;
-  border: 2px solid black;
 }
 
 @media screen and (min-width: 768px) {
   .booklist {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     /* align-items: start; */
   }
 }
 
-.booklist {
+.book {
   background: #fff;
   border-radius: 1rem;
   padding: 1rem 2rem;
 }
 
-.booklist h1 {
+.book h1 {
   margin-top: 0.5rem;
 }
-.booklist h4 {
+
+.book h4 {
   color: #617d98;
   font-size: 0.75rem;
   margin-top: 0.25rem;
 }
-.booklist p {
+
+.book p {
   margin-top: 0.5rem;
 }

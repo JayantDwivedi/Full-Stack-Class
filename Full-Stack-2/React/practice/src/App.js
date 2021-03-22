@@ -8,19 +8,13 @@ import Contact from "./Pages/ContactUs";
 import Right from "./Pages/Rightnavbar";
 import MyCard from "./component/Card";
 
+// importing React Event
+import Event from "./Events/Events";
+
 export default function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <Right />
-        <switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" exact component={About} />
-          <Route path="/contact" exact component={Contact} />
-        </switch>
-        <MyCard />
-      </div>
-    </Router>
+    <div className="App">
+      <Event />
+    </div>
   );
 }

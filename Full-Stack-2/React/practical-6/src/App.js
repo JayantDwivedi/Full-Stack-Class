@@ -8,6 +8,9 @@ import Counter from "./component/Counter";
 import ShowMoreLess from "./component/ShowMoreLess";
 import ReactHooks from "./component/ReactHooks";
 
+// importing for react events
+import Event from "./Events/Events";
+
 const name = "Jayant"; // declare as a variable
 const boolean = true;
 const imageSource =
@@ -43,7 +46,8 @@ function App() {
       <h1>Question 8-B</h1>
       <ShowMoreLess /> */}
 
-      <ReactHooks />
+      {/* <ReactHooks /> */}
+      <Event />
     </div>
   );
 }

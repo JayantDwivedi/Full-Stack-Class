@@ -1,0 +1,22 @@
+* {
+    text-align: center;
+}
+
+.inputlabel {
+    display: inline-flex;
+    margin-left: 10%;
+}
+
+.input {
+    margin-right: 5%;
+    padding-top: 5px;
+}
+
+.table {
+    margin: 10%;
+    width: 80%;
+}
+
+thead {
+    background-color: rgb(0, 140, 255);
+}

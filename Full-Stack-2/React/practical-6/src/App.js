@@ -11,6 +11,9 @@ import ReactHooks from "./component/ReactHooks";
 // importing for react events
 import Event from "./Events/Events";
 
+// importing for practical 9
+import Practical9 from "./Events/Practical-9/Practical_9";
+
 const name = "Jayant"; // declare as a variable
 const boolean = true;
 const imageSource =
@@ -47,7 +50,8 @@ function App() {
       <ShowMoreLess /> */}
 
       {/* <ReactHooks /> */}
-      <Event />
+      {/* <Event /> */}
+      <Practical9 />
     </div>
   );
 }

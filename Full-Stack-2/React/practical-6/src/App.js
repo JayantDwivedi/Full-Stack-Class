@@ -50,8 +50,8 @@ function App() {
       <ShowMoreLess /> */}
 
       {/* <ReactHooks /> */}
-      {/* <Event /> */}
-      <Practical9 />
+      <Event />
+      {/* <Practical9 /> */}
     </div>
   );
 }

@@ -7,6 +7,9 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <ul className="nav navbar-nav">
+          <li className="nav-item" className="nav-brand">
+            Navbar
+          </li>
           <li className="nav-item">
             <Link to="/" className="nav-link" exact>
               Home

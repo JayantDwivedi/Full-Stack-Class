@@ -6,67 +6,53 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Event.css";
 
 export default function Event() {
-  // const [detail, setDetail] = useState({
-  //   username: "",
-  //   password: "",
-  //   email: "",
-  // });
+  const [name, setName] = useState("");
+  const [pass, setPass] = useState("");
+  const [mail, setMail] = useState("");
+  const [count, setCount] = useState(2);
+  const [row, setRow] = useState(
+    <tr>
+      <th>1.</th>
+      <th>Jayant</th>
+      <th>1234r</th>
+      <th>jayant.gla_cs18@gmail.com</th>
+    </tr>
+  );
 
-  const [detail, setDetail] = useState([
-    {
-      id: 1,
-      username: "Jayant",
-      email: "jayant12@gmail.com",
-      password: "jayant123@",
-    },
-    {
-      id: 2,
-      username: "Manish Kumar",
-      email: "manishkumar.23@gmail.com",
-      password: "manish456",
-    },
-    {
-      id: 3,
-      username: "Sachin Yadav",
-      email: "sachin.hero@outlook.com",
-      password: "sachin789",
-    },
-  ]);
-
-  const renderDetail = (detail, index) => {
-    return (
-      <tr key={index}>
-        <td>{detail.id}</td>
-        <td>{detail.username}</td>
-        <td>{detail.password}</td>
-        <td>{detail.email}</td>
-      </tr>
-    );
+  const inputUsername = (e) => {
+    setName(e.target.value);
   };
 
-  // const inputUsername = (e) => {
-  //   setDetail({ ...detail, username: e.target.value });
-  // };
+  const inputPassword = (e) => {
+    setPass(e.target.value);
+  };
 
-  // const inputPassword = (e) => {
-  //   setDetail({ ...detail, password: e.target.value });
-  // };
+  const inputEmail = (e) => {
+    setMail(e.target.value);
+  };
 
-  // const inputEmail = (e) => {
-  //   setDetail({ ...detail, email: e.target.value });
-  // };
+  const dataSubmit = () => {
+    if (name == "" || mail == "" || pass == "") {
+      alert("Invalid Information");
+    }
 
-  // const dataSubmit = () => {
-  //   sessionStorage.setItem("mydata", JSON.stringify(detail));
+    setRow(
+      <>
+        {row}
+        <tr>
+          <th>{count}</th>
+          <th>{name}</th>
+          <th>{pass}</th>
+          <th>{mail}</th>
+        </tr>
+      </>
+    );
 
-  //   let detailGetBack = sessionStorage.getItem("mydata");
-  //   detailGetBack = JSON.parse(detailGetBack);
-
-  //   console.log(
-  //     detailGetBack.username + " " + detail.password + " " + detail.email
-  //   );
-  //   alert("data uploaded");
-  // };
+    setName("");
+    setMail("");
+    setPass("");
+    setCount(count + 1);
+  };
 
   return (
     <>
@@ -83,7 +69,7 @@ export default function Event() {
           <ReactBootstrap.Form.Control
             type="text"
             placeholder="Username"
-            // onChange={inputUsername}
+            onChange={inputUsername}
           />
         </ReactBootstrap.Form.Group>
 
@@ -97,7 +83,7 @@ export default function Event() {
           <ReactBootstrap.Form.Control
             type="password"
             placeholder="Password"
-            // onChange={inputPassword}
+            onChange={inputPassword}
           />
         </ReactBootstrap.Form.Group>
         <ReactBootstrap.Form.Group
@@ -110,13 +96,13 @@ export default function Event() {
           <ReactBootstrap.Form.Control
             type="text"
             placeholder="Email"
-            // onChange={inputEmail}
+            onChange={inputEmail}
           />
         </ReactBootstrap.Form.Group>
 
-        <ReactBootstrap.Button variant="primary" type="submit">
+        <button type="button" onClick={dataSubmit}>
           Submit
-        </ReactBootstrap.Button>
+        </button>
       </ReactBootstrap.Form>
 
       <ReactBootstrap.Table striped bordered hover className="table">
@@ -128,7 +114,7 @@ export default function Event() {
             <th>Email</th>
           </tr>
         </thead>
-        <tbody>{detail.map(renderDetail)}</tbody>
+        <tbody>{row}</tbody>
       </ReactBootstrap.Table>
     </>
   );

@@ -9,16 +9,16 @@ const app = express();
 const courses = [
   {
     id: 1,
-    name: "HTML",
+    name: "Jayant",
   },
   {
     id: 2,
-    name: "JS",
+    name: "Kushagra",
   },
-  {
-    id: 3,
-    name: "JAVA",
-  },
+  // {
+  //   id: 3,
+  //   name: "Kartik",
+  // },
 ];
 
 // get request for RESTAPI

@@ -12,7 +12,7 @@ import ReactHooks from "./component/ReactHooks";
 import Event from "./Events/Events";
 
 // importing for practical 9
-import Practical9 from "./Events/Practical-9/Practical_9";
+import Practical9 from "./Events/Events";
 
 const name = "Jayant"; // declare as a variable
 const boolean = true;
